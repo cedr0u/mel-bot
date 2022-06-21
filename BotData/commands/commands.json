@@ -1,0 +1,728 @@
+{
+  "command": [
+    {
+      "name": "help",
+      "perms": [],
+      "actions": [
+        {
+          "name": "help menu",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "-help",
+              "value": "afficher ce menu",
+              "inline": "true"
+            },
+            {
+              "name": "-info",
+              "value": "avoir des info sur le bot",
+              "inline": "true"
+            },
+            {
+              "name": "-invite",
+              "value": "inviter le bot",
+              "inline": "true"
+            },
+            {
+              "name": "-hello / -bonjour",
+              "value": "réponce random",
+              "inline": "true"
+            },
+            {
+              "name": "-sondage (titre) (...) (...) ...",
+              "value": "faire des sondages,\n[utiliser des - à la place des espace pour le titre]",
+              "inline": "true"
+            },
+            {
+              "name": "-nombre (nombre) (nombre)",
+              "value": "nombre aléatoire entre le premier et le deuxième nombre",
+              "inline": "true"
+            },
+            {
+              "name": "-clear (nombre)",
+              "value": "supprimer des messages",
+              "inline": "true"
+            },
+            {
+              "name": "-userinfo (@membre)",
+              "value": "avoir des infos sur un membre",
+              "inline": "true"
+            }
+          ],
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "1FFF57",
+          "title": "Help Menu",
+          "url": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "authorname": "Mel bot",
+          "authorimageurl": "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+          "authorlink": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "description": "toute les commandes ont le préfix -\n\ncommandes :",
+          "thumbnail": "https://image.flaticon.com/icons/png/512/682/682055.png",
+          "image": "",
+          "footer": "Mel bot",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "info",
+      "actions": [
+        {
+          "name": "show info -",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FF696F",
+          "title": "info",
+          "url": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "authorname": "Mel bot",
+          "authorimageurl": "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+          "authorlink": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "description": "dév: @cedrou\nversion: V0.3.6\najout(s): \n-optimisation\ndernière mise à jour: <t:1645632420:F> /  <t:1645632420:R>\ndate de création: <t:1634834610:F> /  <t:1634834610:R>",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Mel bot",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "invite",
+      "actions": [
+        {
+          "name": "show invite-",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FFCB26",
+          "title": "invite",
+          "url": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "authorname": "Mel bot",
+          "authorimageurl": "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+          "authorlink": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "description": "lien d'invitation du bot:\n\nhttps://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Mel bot",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "hello",
+      "actions": [
+        {
+          "name": "variable romdom bonjour",
+          "category": "Variable",
+          "type": "Generate Random Number",
+          "messageActionRows": [],
+          "varname": "ramdom_bonjour",
+          "min": "1",
+          "max": "6",
+          "savevartype": "temp"
+        },
+        {
+          "name": "réponce bonjour",
+          "category": "Control",
+          "type": "Switch Case",
+          "valueActions": {
+            "1": [
+              {
+                "name": "bonjour 1",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "Bonjour,\ncomment sa va ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "2": [
+              {
+                "name": "bonjour 2",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "hey,\nComment s’est passé votre journée ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "3": [
+              {
+                "name": "bonjour 3",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "yo,\nQue pensez-vous de moi ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "4": [
+              {
+                "name": "bonjour 4",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "salut,\nJ’essaie de rencontrer de nouvelles personnes ici au lieu de simplement parler aux personnes que je connais déjà. Pouvons-nous échanger quelques instants ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "5": [
+              {
+                "name": "bonjour 5",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "oui,\nJe vais être honnête, la seule personne que je connaisse ici, c’est le barman, et je l’ai juste rencontré il y a deux minutes.",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "6": [
+              {
+                "name": "bonjour 6",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "hello toi,\nQuelle est la meilleure question que l’on vous ai posée ce soir ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ]
+          },
+          "messageActionRows": [],
+          "varname": "${tempVars.ramdom_bonjour}"
+        }
+      ]
+    },
+    {
+      "name": "bonjour",
+      "actions": [
+        {
+          "name": "variable romdom bonjour",
+          "category": "Variable",
+          "type": "Generate Random Number",
+          "messageActionRows": [],
+          "varname": "ramdom_bonjour",
+          "min": "1",
+          "max": "6",
+          "savevartype": "temp"
+        },
+        {
+          "name": "réponce bonjour",
+          "category": "Control",
+          "type": "Switch Case",
+          "valueActions": {
+            "1": [
+              {
+                "name": "bonjour 1",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "Bonjour,\ncomment sa va ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "2": [
+              {
+                "name": "bonjour 2",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "hey,\nComment s’est passé votre journée ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "3": [
+              {
+                "name": "bonjour 3",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "yo,\nQue pensez-vous de moi ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "4": [
+              {
+                "name": "bonjour 4",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "salut,\nJ’essaie de rencontrer de nouvelles personnes ici au lieu de simplement parler aux personnes que je connais déjà. Pouvons-nous échanger quelques instants ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "5": [
+              {
+                "name": "bonjour 5",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "oui,\nJe vais être honnête, la seule personne que je connaisse ici, c’est le barman, et je l’ai juste rencontré il y a deux minutes.",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ],
+            "6": [
+              {
+                "name": "bonjour 6",
+                "category": "Message",
+                "type": "Send Message",
+                "messageActionRows": [],
+                "channelname": "${dbsVars.CommandChannel.id}",
+                "messagetext": "hello toi,\nQuelle est la meilleure question que l’on vous ai posée ce soir ?",
+                "savetovariable": "",
+                "savetovariabletype": "temp"
+              }
+            ]
+          },
+          "messageActionRows": [],
+          "varname": "${tempVars.ramdom_bonjour}"
+        }
+      ]
+    },
+    {
+      "name": "sondage",
+      "actions": [
+        {
+          "name": "sondage_variable",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_titre",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "sondage_variable_0",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_1",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "sondage_variable_1",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_2",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "3"
+        },
+        {
+          "name": "sondage_variable_2",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_3",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "4"
+        },
+        {
+          "name": "sondage_variable_3",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_4",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "5"
+        },
+        {
+          "name": "sondage_variable_4",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_5",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "6"
+        },
+        {
+          "name": "sondage_variable_5",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_6",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "7"
+        },
+        {
+          "name": "sondage_variable_6",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_7",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "8"
+        },
+        {
+          "name": "sondage_variable_7",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_8",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "9"
+        },
+        {
+          "name": "sondage_variable_8",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_9",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "10"
+        },
+        {
+          "name": "sondage_variable_9",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_10",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "11"
+        },
+        {
+          "name": "sondage_variable_10",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_11",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "12"
+        },
+        {
+          "name": "sondage_variable_11",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "sondage_12",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "13"
+        },
+        {
+          "name": "réponce sondage",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "EEFF7A",
+          "title": "sondage: ${tempVars.sondage_titre}",
+          "url": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "authorname": "Mel bot",
+          "authorimageurl": "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+          "authorlink": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "description": ":regional_indicator_a: ${tempVars.sondage_1}\n:regional_indicator_b: ${tempVars.sondage_2}\n:regional_indicator_c: ${tempVars.sondage_3}\n:regional_indicator_d: ${tempVars.sondage_4}\n:regional_indicator_e: ${tempVars.sondage_5}\n:regional_indicator_f: ${tempVars.sondage_6}\n:regional_indicator_g: ${tempVars.sondage_7}\n:regional_indicator_h: ${tempVars.sondage_8}\n:regional_indicator_i: ${tempVars.sondage_9}\n:regional_indicator_j: ${tempVars.sondage_10}\n:regional_indicator_k: ${tempVars.sondage_11}\n:regional_indicator_l: ${tempVars.sondage_12}",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Mel bot",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "sondage_message_id",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "user_react_sondage_emoji",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "user_react_sondage",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": ""
+        },
+        {
+          "name": "emoji_reacted_sondage",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "react_emoji_sondage",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": ""
+        },
+        {
+          "name": "sondage_emoji",
+          "category": "Reaction",
+          "type": "Add Reaction Listener",
+          "reactionActions": {
+            "🇦": [],
+            "🇧": [],
+            "🇨": [],
+            "🇩": [],
+            "🇪": [],
+            "🇫": [],
+            "🇬": [],
+            "🇭": [],
+            "🇮": [],
+            "🇯": [],
+            "🇰": [],
+            "🇱": []
+          },
+          "messageActionRows": [],
+          "message": "${tempVars.sondage_message_id.id}",
+          "duration": "0",
+          "reactionemoji": "${tempVars.react_emoji_sondage}",
+          "reactionuser": "${tempVars.user_react_sondage}",
+          "react": "BOOL_TRUE@@"
+        }
+      ]
+    },
+    {
+      "name": "nombre",
+      "actions": [
+        {
+          "name": "nombre_aléatoire_1",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "nombre_aléatoire_1",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "nombre_aléatoire_2",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "nombre_aléatoire_2",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "2"
+        },
+        {
+          "name": "générateur_nombre_aléatoire",
+          "category": "Variable",
+          "type": "Generate Random Number",
+          "messageActionRows": [],
+          "varname": "nombre_aléatoire_générer",
+          "min": "${tempVars.nombre_aléatoire_1}",
+          "max": "${tempVars.nombre_aléatoire_2}",
+          "savevartype": "temp"
+        },
+        {
+          "name": "envoi_nombre_aléatoire",
+          "category": "Message",
+          "type": "Send Embed",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "EF6EFF",
+          "title": "nombre aléatoire",
+          "url": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "authorname": "Mel bot",
+          "authorimageurl": "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+          "authorlink": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "description": "Nombre aléatoire entre ${tempVars.nombre_aléatoire_1} et ${tempVars.nombre_aléatoire_2} :\n${tempVars.nombre_aléatoire_générer}",
+          "thumbnail": "",
+          "image": "",
+          "footer": "Mel bot",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "clear",
+      "actions": [
+        {
+          "name": "clear_combien",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "clear_combien",
+          "vartype": "Number",
+          "savevartype": "temp",
+          "param": "1"
+        },
+        {
+          "name": "clear messages",
+          "category": "Channel Action",
+          "type": "Delete All Messages",
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "msgcount": "${tempVars.clear_combien}"
+        }
+      ]
+    },
+    {
+      "name": "userinfo",
+      "actions": [
+        {
+          "name": "user qui",
+          "category": "Variable",
+          "type": "Store Value in Variable",
+          "messageActionRows": [],
+          "varname": "userinfo_pseudo",
+          "vartype": "Text",
+          "savevartype": "temp",
+          "param": "1+"
+        },
+        {
+          "name": "user pseudo",
+          "category": "Variable",
+          "type": "Get Mentioned User",
+          "messageActionRows": [],
+          "varname": "pseudo_user",
+          "vartype": "User",
+          "savevartype": "temp"
+        },
+        {
+          "name": "réponce user info",
+          "category": "Message",
+          "type": "Send Embed",
+          "fields": [
+            {
+              "name": "mention",
+              "value": "<@${tempVars.pseudo_user.id}>",
+              "inline": "true"
+            },
+            {
+              "name": "couleur",
+              "value": "${tempVars.pseudo_user.displayHexColor}",
+              "inline": "true"
+            },
+            {
+              "name": "tag",
+              "value": "${tempVars.pseudo_user.user.tag}",
+              "inline": "true"
+            },
+            {
+              "name": "pseudo",
+              "value": "${tempVars.pseudo_user.displayName}",
+              "inline": "true"
+            },
+            {
+              "name": "pseudo du server",
+              "value": "${tempVars.pseudo_user.nickname}",
+              "inline": "true"
+            },
+            {
+              "name": "id",
+              "value": "${tempVars.pseudo_user.id}",
+              "inline": "true"
+            },
+            {
+              "name": "avatar du serveur",
+              "value": "${tempVars.pseudo_user.user.avatarURL}",
+              "inline": "true"
+            },
+            {
+              "name": "avatar d'origine",
+              "value": "${tempVars.pseudo_user.user.defaultAvatarURL}",
+              "inline": "true"
+            }
+          ],
+          "messageActionRows": [],
+          "channelname": "${dbsVars.CommandChannel.id}",
+          "color": "FAFF52",
+          "title": "user info ${tempVars.pseudo_user.displayName}",
+          "url": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "authorname": "Mel bot",
+          "authorimageurl": "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+          "authorlink": "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+          "description": "",
+          "thumbnail": "${tempVars.pseudo_user.user.avatarURL}",
+          "image": "",
+          "footer": "Mel bot",
+          "timestamp": "BOOL_TRUE@@",
+          "savetovariable": "",
+          "savetovariabletype": "temp"
+        }
+      ]
+    },
+    {
+      "name": "salon role",
+      "perms": [
+        "admin-mel-bot"
+      ],
+      "actions": [
+        {
+          "name": "roles",
+          "category": "Channel Action",
+          "type": "Create Channel",
+          "messageActionRows": [],
+          "channelname": "Roles",
+          "chancategory": "",
+          "reason": "attributions roles",
+          "channeltype": "Text",
+          "savetovariable": "roles-salon",
+          "savetovariabletype": "temp"
+        },
+        {
+          "name": "roles perm",
+          "category": "Channel Action",
+          "type": "Update Channel Permissions",
+          "messageActionRows": [],
+          "channelname": "${tempVars.roles.id}",
+          "permid": "${tempVars.Admin.id} ",
+          "permissions": [
+            "BAN_MEMBERS"
+          ],
+          "allow": "Allow"
+        }
+      ]
+    },
+    {
+      "name": "admin mel bot",
+      "actions": [
+        {
+          "name": "admin-mel-bot",
+          "category": "Server Action",
+          "type": "Add Role to Server",
+          "messageActionRows": [],
+          "rolename": "Admin-mel-bot",
+          "color": "FFFFFF",
+          "position": "",
+          "hoist": "false",
+          "mentionable": "false",
+          "savetovariable": "Admin-mel-bot",
+          "savetovariabletype": "temp"
+        }
+      ]
+    }
+  ]
+}

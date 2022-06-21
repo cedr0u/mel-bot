@@ -1,0 +1,2091 @@
+{
+  "nodes": [
+    {
+      "type": "command",
+      "name": "help",
+      "guid": "7942fe4c-dffa-4146-8cab-d254b3d80d5d",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "37eda463-a170-44f9-af54-61378ffc9294"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 157,
+      "y": 94,
+      "perms": []
+    },
+    {
+      "type": "command",
+      "name": "info",
+      "guid": "2224944a-561a-4fa1-824b-2f31ea37c836",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "8d44a46d-6a0a-4fb1-912a-2ebbb442d80e"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 168,
+      "y": 221
+    },
+    {
+      "type": "response",
+      "name": "help menu",
+      "guid": "37eda463-a170-44f9-af54-61378ffc9294",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "-help",
+          "value": "afficher ce menu",
+          "inline": "true"
+        },
+        {
+          "name": "-info",
+          "value": "avoir des info sur le bot",
+          "inline": "true"
+        },
+        {
+          "name": "-invite",
+          "value": "inviter le bot",
+          "inline": "true"
+        },
+        {
+          "name": "-hello / -bonjour",
+          "value": "réponce random",
+          "inline": "true"
+        },
+        {
+          "name": "-sondage (titre) (...) (...) ...",
+          "value": "faire des sondages,\n[utiliser des - à la place des espace pour le titre]",
+          "inline": "true"
+        },
+        {
+          "name": "-nombre (nombre) (nombre)",
+          "value": "nombre aléatoire entre le premier et le deuxième nombre",
+          "inline": "true"
+        },
+        {
+          "name": "-clear (nombre)",
+          "value": "supprimer des messages",
+          "inline": "true"
+        },
+        {
+          "name": "-userinfo (@membre)",
+          "value": "avoir des infos sur un membre",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7942fe4c-dffa-4146-8cab-d254b3d80d5d"
+        }
+      ],
+      "x": 363,
+      "y": 81,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "1FFF57",
+        "Help Menu",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "Mel bot",
+        "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "toute les commandes ont le préfix -\n\ncommandes :",
+        "https://image.flaticon.com/icons/png/512/682/682055.png",
+        "",
+        "Mel bot",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "invite",
+      "guid": "b7b7f817-d181-49c3-8dcb-d7b4c577d01b",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "93115fe2-1108-4521-9181-2285f6244c7e"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 173,
+      "y": 357
+    },
+    {
+      "type": "response",
+      "name": "show invite-",
+      "guid": "93115fe2-1108-4521-9181-2285f6244c7e",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b7b7f817-d181-49c3-8dcb-d7b4c577d01b"
+        }
+      ],
+      "x": 356,
+      "y": 349,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FFCB26",
+        "invite",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "Mel bot",
+        "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "lien d'invitation du bot:\n\nhttps://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "",
+        "",
+        "Mel bot",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "hello",
+      "guid": "18501896-9925-45e3-ab28-1ae3b9c59036",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "7deee32e-362c-4d65-8da9-fc0842b2e751"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 167,
+      "y": 539
+    },
+    {
+      "type": "command",
+      "name": "bonjour",
+      "guid": "d6c222b8-54b8-4a88-a3d4-910346152e9c",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "7deee32e-362c-4d65-8da9-fc0842b2e751"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 162,
+      "y": 654
+    },
+    {
+      "type": "response",
+      "name": "réponce bonjour",
+      "guid": "258a2436-7046-4ef7-a2a3-7d92dd2873da",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "1",
+          "connections": [
+            "317950d6-06f1-44a6-a404-319ae143089e"
+          ]
+        },
+        {
+          "label": "2",
+          "connections": [
+            "0ff6597d-f451-4e1f-81d2-a03068db3251"
+          ]
+        },
+        {
+          "label": "3",
+          "connections": [
+            "30b44f8a-5824-4630-b148-9c32675333ab"
+          ]
+        },
+        {
+          "label": "4",
+          "connections": [
+            "4db8512c-2d4e-4a7e-916e-e9bf59cebc61"
+          ]
+        },
+        {
+          "label": "5",
+          "connections": [
+            "4bfc220d-e4d3-4efe-8786-2ee7455bee66"
+          ]
+        },
+        {
+          "label": "6",
+          "connections": [
+            "f2d50efc-3ad4-410e-bef0-d8d98a58afc1"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "313af720-b461-4d68-abac-89808153f1b4"
+        }
+      ],
+      "x": 769,
+      "y": 507,
+      "rtype": "Control",
+      "rsubtype": "Switch Case",
+      "formdata": [
+        "${tempVars.ramdom_bonjour}"
+      ],
+      "formnames": [
+        "varname",
+        "switchvalue1",
+        "switchvalue2",
+        "switchvalue3",
+        "switchvalue4",
+        "switchvalue5",
+        "switchvalue6"
+      ],
+      "messageActionRows": [],
+      "valueFields": [
+        "1",
+        "2",
+        "3",
+        "4",
+        "5",
+        "6"
+      ]
+    },
+    {
+      "type": "response",
+      "name": "multi input bonjour",
+      "guid": "7deee32e-362c-4d65-8da9-fc0842b2e751",
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "313af720-b461-4d68-abac-89808153f1b4"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "18501896-9925-45e3-ab28-1ae3b9c59036"
+        },
+        {
+          "label": "trigger",
+          "id": "d6c222b8-54b8-4a88-a3d4-910346152e9c"
+        }
+      ],
+      "x": 366,
+      "y": 511,
+      "rtype": "Control",
+      "rsubtype": "Multiple Input",
+      "messageActionRows": []
+    },
+    {
+      "type": "response",
+      "name": "variable romdom bonjour",
+      "guid": "313af720-b461-4d68-abac-89808153f1b4",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "258a2436-7046-4ef7-a2a3-7d92dd2873da"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "7deee32e-362c-4d65-8da9-fc0842b2e751"
+        }
+      ],
+      "x": 564,
+      "y": 547,
+      "rtype": "Variable",
+      "rsubtype": "Generate Random Number",
+      "formdata": [
+        "ramdom_bonjour",
+        "1",
+        "6",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "min",
+        "max",
+        "saveVarType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "bonjour 1",
+      "guid": "317950d6-06f1-44a6-a404-319ae143089e",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "258a2436-7046-4ef7-a2a3-7d92dd2873da"
+        }
+      ],
+      "x": 998,
+      "y": 415,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "Bonjour,\ncomment sa va ?",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "bonjour 2",
+      "guid": "0ff6597d-f451-4e1f-81d2-a03068db3251",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "258a2436-7046-4ef7-a2a3-7d92dd2873da"
+        }
+      ],
+      "x": 1002,
+      "y": 527,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "hey,\nComment s’est passé votre journée ?",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "bonjour 3",
+      "guid": "30b44f8a-5824-4630-b148-9c32675333ab",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "258a2436-7046-4ef7-a2a3-7d92dd2873da"
+        }
+      ],
+      "x": 1004,
+      "y": 636,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "yo,\nQue pensez-vous de moi ?",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "bonjour 4",
+      "guid": "4db8512c-2d4e-4a7e-916e-e9bf59cebc61",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "258a2436-7046-4ef7-a2a3-7d92dd2873da"
+        }
+      ],
+      "x": 1005,
+      "y": 748,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "salut,\nJ’essaie de rencontrer de nouvelles personnes ici au lieu de simplement parler aux personnes que je connais déjà. Pouvons-nous échanger quelques instants ?",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "bonjour 5",
+      "guid": "4bfc220d-e4d3-4efe-8786-2ee7455bee66",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "258a2436-7046-4ef7-a2a3-7d92dd2873da"
+        }
+      ],
+      "x": 1006,
+      "y": 861,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "oui,\nJe vais être honnête, la seule personne que je connaisse ici, c’est le barman, et je l’ai juste rencontré il y a deux minutes.",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "bonjour 6",
+      "guid": "f2d50efc-3ad4-410e-bef0-d8d98a58afc1",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "258a2436-7046-4ef7-a2a3-7d92dd2873da"
+        }
+      ],
+      "x": 1010,
+      "y": 977,
+      "rtype": "Message",
+      "rsubtype": "Send Message",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "hello toi,\nQuelle est la meilleure question que l’on vous ai posée ce soir ?",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelName",
+        "messageText",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "show info -",
+      "guid": "8d44a46d-6a0a-4fb1-912a-2ebbb442d80e",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2224944a-561a-4fa1-824b-2f31ea37c836"
+        }
+      ],
+      "x": 363,
+      "y": 215,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FF696F",
+        "info",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "Mel bot",
+        "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "dév: @cedrou\nversion: V0.3.6\najout(s): \n-optimisation\ndernière mise à jour: <t:1645632420:F> /  <t:1645632420:R>\ndate de création: <t:1634834610:F> /  <t:1634834610:R>",
+        "",
+        "",
+        "Mel bot",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "sondage",
+      "guid": "75f7d9f3-d36a-4226-9db3-179715cfad00",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "01b5fbf6-6538-4c1d-80e7-99e88de0f83c"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 151,
+      "y": 799
+    },
+    {
+      "type": "response",
+      "name": "réponce sondage",
+      "guid": "2ee9528c-c9e8-488f-a704-644f84295417",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_message_id",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b113092f-fc9d-4908-ad28-67a4c80afcec"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "682fc2fc-b464-4e5f-b836-355c9894b62a"
+        }
+      ],
+      "x": 979,
+      "y": 1319,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "EEFF7A",
+        "sondage: ${tempVars.sondage_titre}",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "Mel bot",
+        "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        ":regional_indicator_a: ${tempVars.sondage_1}\n:regional_indicator_b: ${tempVars.sondage_2}\n:regional_indicator_c: ${tempVars.sondage_3}\n:regional_indicator_d: ${tempVars.sondage_4}\n:regional_indicator_e: ${tempVars.sondage_5}\n:regional_indicator_f: ${tempVars.sondage_6}\n:regional_indicator_g: ${tempVars.sondage_7}\n:regional_indicator_h: ${tempVars.sondage_8}\n:regional_indicator_i: ${tempVars.sondage_9}\n:regional_indicator_j: ${tempVars.sondage_10}\n:regional_indicator_k: ${tempVars.sondage_11}\n:regional_indicator_l: ${tempVars.sondage_12}",
+        "",
+        "",
+        "Mel bot",
+        "BOOL_TRUE@@",
+        "sondage_message_id",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable",
+      "guid": "01b5fbf6-6538-4c1d-80e7-99e88de0f83c",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_titre",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "0385ff80-05dc-44e2-ab92-41837ecc970c"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "75f7d9f3-d36a-4226-9db3-179715cfad00"
+        }
+      ],
+      "x": 147,
+      "y": 892,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_titre",
+        "Text",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_1",
+      "guid": "c193f947-4176-41a7-aba3-f99e6d4751a6",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_2",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "b95ba67e-55bb-493b-a6be-68990aa7c76f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "0385ff80-05dc-44e2-ab92-41837ecc970c"
+        }
+      ],
+      "x": 555,
+      "y": 818,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_2",
+        "Text",
+        "temp",
+        "3"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_2",
+      "guid": "b95ba67e-55bb-493b-a6be-68990aa7c76f",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_3",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "31318758-4d3d-45d1-9df6-3f68e68ab11f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c193f947-4176-41a7-aba3-f99e6d4751a6"
+        }
+      ],
+      "x": 747,
+      "y": 823,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_3",
+        "Text",
+        "temp",
+        "4"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_3",
+      "guid": "31318758-4d3d-45d1-9df6-3f68e68ab11f",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_4",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "0977df90-d732-4b67-9fff-1bb55e9e2826"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b95ba67e-55bb-493b-a6be-68990aa7c76f"
+        }
+      ],
+      "x": 362,
+      "y": 974,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_4",
+        "Text",
+        "temp",
+        "5"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_4",
+      "guid": "0977df90-d732-4b67-9fff-1bb55e9e2826",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_5",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "8a651ac3-0f6e-43d0-9308-8b5db2e19e68"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "31318758-4d3d-45d1-9df6-3f68e68ab11f"
+        }
+      ],
+      "x": 551,
+      "y": 986,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_5",
+        "Text",
+        "temp",
+        "6"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_5",
+      "guid": "8a651ac3-0f6e-43d0-9308-8b5db2e19e68",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_6",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "ae8efef3-8a02-4445-9773-526192a3cb0d"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "0977df90-d732-4b67-9fff-1bb55e9e2826"
+        }
+      ],
+      "x": 759,
+      "y": 986,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_6",
+        "Text",
+        "temp",
+        "7"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_6",
+      "guid": "ae8efef3-8a02-4445-9773-526192a3cb0d",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_7",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "90e11779-ba19-4805-a2d6-3d54f132b8c1"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "8a651ac3-0f6e-43d0-9308-8b5db2e19e68"
+        }
+      ],
+      "x": 356,
+      "y": 1140,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_7",
+        "Text",
+        "temp",
+        "8"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_7",
+      "guid": "90e11779-ba19-4805-a2d6-3d54f132b8c1",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_8",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "fac832e2-28b1-4f52-a055-c2c04d7abdbf"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ae8efef3-8a02-4445-9773-526192a3cb0d"
+        }
+      ],
+      "x": 552,
+      "y": 1153,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_8",
+        "Text",
+        "temp",
+        "9"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_8",
+      "guid": "fac832e2-28b1-4f52-a055-c2c04d7abdbf",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_9",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "2ef4104d-7f8b-4f19-b3cb-13bbcef73369"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "90e11779-ba19-4805-a2d6-3d54f132b8c1"
+        }
+      ],
+      "x": 747,
+      "y": 1157,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_9",
+        "Text",
+        "temp",
+        "10"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_9",
+      "guid": "2ef4104d-7f8b-4f19-b3cb-13bbcef73369",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_10",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "5be363f1-4cac-4671-9b91-930371461eb2"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "fac832e2-28b1-4f52-a055-c2c04d7abdbf"
+        }
+      ],
+      "x": 354,
+      "y": 1302,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_10",
+        "Text",
+        "temp",
+        "11"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_10",
+      "guid": "5be363f1-4cac-4671-9b91-930371461eb2",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_11",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "682fc2fc-b464-4e5f-b836-355c9894b62a"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2ef4104d-7f8b-4f19-b3cb-13bbcef73369"
+        }
+      ],
+      "x": 553,
+      "y": 1312,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_11",
+        "Text",
+        "temp",
+        "12"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_11",
+      "guid": "682fc2fc-b464-4e5f-b836-355c9894b62a",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_12",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "2ee9528c-c9e8-488f-a704-644f84295417"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "5be363f1-4cac-4671-9b91-930371461eb2"
+        }
+      ],
+      "x": 751,
+      "y": 1313,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_12",
+        "Text",
+        "temp",
+        "13"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_emoji",
+      "guid": "f98d4d19-9c18-45f1-b4d0-971987a29888",
+      "reactionFields": [
+        "🇦",
+        "🇧",
+        "🇨",
+        "🇩",
+        "🇪",
+        "🇫",
+        "🇬",
+        "🇭",
+        "🇮",
+        "🇯",
+        "🇰",
+        "🇱"
+      ],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "🇦",
+          "connections": []
+        },
+        {
+          "label": "🇧",
+          "connections": []
+        },
+        {
+          "label": "🇨",
+          "connections": []
+        },
+        {
+          "label": "🇩",
+          "connections": []
+        },
+        {
+          "label": "🇪",
+          "connections": []
+        },
+        {
+          "label": "🇫",
+          "connections": []
+        },
+        {
+          "label": "🇬",
+          "connections": []
+        },
+        {
+          "label": "🇭",
+          "connections": []
+        },
+        {
+          "label": "🇮",
+          "connections": []
+        },
+        {
+          "label": "🇯",
+          "connections": []
+        },
+        {
+          "label": "🇰",
+          "connections": []
+        },
+        {
+          "label": "🇱",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2f87ac7d-0221-4046-a948-9df339c724b6"
+        }
+      ],
+      "x": 1625,
+      "y": 1333,
+      "rtype": "Reaction",
+      "rsubtype": "Add Reaction Listener",
+      "formdata": [
+        "${tempVars.sondage_message_id.id}",
+        "0",
+        "${tempVars.react_emoji_sondage}",
+        "${tempVars.user_react_sondage}",
+        "BOOL_TRUE@@"
+      ],
+      "formnames": [
+        "message",
+        "duration",
+        "reactionemoji",
+        "reactionuser",
+        "react"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "user_react_sondage_emoji",
+      "guid": "b113092f-fc9d-4908-ad28-67a4c80afcec",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "user_react_sondage",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "2f87ac7d-0221-4046-a948-9df339c724b6"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "2ee9528c-c9e8-488f-a704-644f84295417"
+        }
+      ],
+      "x": 1209,
+      "y": 1330,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "user_react_sondage",
+        "Text",
+        "temp",
+        ""
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "emoji_reacted_sondage",
+      "guid": "2f87ac7d-0221-4046-a948-9df339c724b6",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "react_emoji_sondage",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f98d4d19-9c18-45f1-b4d0-971987a29888"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "b113092f-fc9d-4908-ad28-67a4c80afcec"
+        }
+      ],
+      "x": 1439,
+      "y": 1336,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "react_emoji_sondage",
+        "Text",
+        "temp",
+        ""
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "sondage_variable_0",
+      "guid": "0385ff80-05dc-44e2-ab92-41837ecc970c",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "sondage_1",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "c193f947-4176-41a7-aba3-f99e6d4751a6"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "01b5fbf6-6538-4c1d-80e7-99e88de0f83c"
+        }
+      ],
+      "x": 358,
+      "y": 812,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "sondage_1",
+        "Text",
+        "temp",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "nombre",
+      "guid": "408c0f62-2c9d-42e4-8068-78a970cc66de",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "44ec0294-150c-40be-9456-d9e28f9898ae"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 162,
+      "y": 1457
+    },
+    {
+      "type": "response",
+      "name": "nombre_aléatoire_1",
+      "guid": "44ec0294-150c-40be-9456-d9e28f9898ae",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "nombre_aléatoire_1",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "f3625f89-bcfd-437b-9b68-50ede417e724"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "408c0f62-2c9d-42e4-8068-78a970cc66de"
+        }
+      ],
+      "x": 353,
+      "y": 1449,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "nombre_aléatoire_1",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "nombre_aléatoire_2",
+      "guid": "f3625f89-bcfd-437b-9b68-50ede417e724",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "nombre_aléatoire_2",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "187bc064-8ab3-4836-9a7f-a3d10bb70103"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "44ec0294-150c-40be-9456-d9e28f9898ae"
+        }
+      ],
+      "x": 548,
+      "y": 1451,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "nombre_aléatoire_2",
+        "Number",
+        "temp",
+        "2"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "générateur_nombre_aléatoire",
+      "guid": "187bc064-8ab3-4836-9a7f-a3d10bb70103",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "2caf4ac4-2df5-4955-8081-4e152d63627f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "f3625f89-bcfd-437b-9b68-50ede417e724"
+        }
+      ],
+      "x": 750,
+      "y": 1458,
+      "rtype": "Variable",
+      "rsubtype": "Generate Random Number",
+      "formdata": [
+        "nombre_aléatoire_générer",
+        "${tempVars.nombre_aléatoire_1}",
+        "${tempVars.nombre_aléatoire_2}",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "min",
+        "max",
+        "saveVarType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "envoi_nombre_aléatoire",
+      "guid": "2caf4ac4-2df5-4955-8081-4e152d63627f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "187bc064-8ab3-4836-9a7f-a3d10bb70103"
+        }
+      ],
+      "x": 983,
+      "y": 1467,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "EF6EFF",
+        "nombre aléatoire",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "Mel bot",
+        "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "Nombre aléatoire entre ${tempVars.nombre_aléatoire_1} et ${tempVars.nombre_aléatoire_2} :\n${tempVars.nombre_aléatoire_générer}",
+        "",
+        "",
+        "Mel bot",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "clear",
+      "guid": "64932b76-6556-4b1b-9c10-8bee9def6645",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "ca044cf3-bb0c-44bd-a3a4-74a491d1ee31"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 162,
+      "y": 1606
+    },
+    {
+      "type": "response",
+      "name": "clear_combien",
+      "guid": "ca044cf3-bb0c-44bd-a3a4-74a491d1ee31",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "clear_combien",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "cfb555fd-8b46-4747-aba3-61aa06a5fd0a"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "64932b76-6556-4b1b-9c10-8bee9def6645"
+        }
+      ],
+      "x": 348,
+      "y": 1597,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "clear_combien",
+        "Number",
+        "temp",
+        "1"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "clear messages",
+      "guid": "cfb555fd-8b46-4747-aba3-61aa06a5fd0a",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "ca044cf3-bb0c-44bd-a3a4-74a491d1ee31"
+        }
+      ],
+      "x": 540,
+      "y": 1599,
+      "rtype": "Channel Action",
+      "rsubtype": "Delete All Messages",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "${tempVars.clear_combien}"
+      ],
+      "formnames": [
+        "channelname",
+        "msgcount"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "userinfo",
+      "guid": "245b8cf5-3dfc-42a6-ba91-7dbc7e4732d8",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "c71823fa-c536-406a-929c-bd62972e9326"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 163,
+      "y": 1755
+    },
+    {
+      "type": "response",
+      "name": "user qui",
+      "guid": "c71823fa-c536-406a-929c-bd62972e9326",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "userinfo_pseudo",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "719bbf31-8b4f-40f9-9f94-9d54bac84509"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "245b8cf5-3dfc-42a6-ba91-7dbc7e4732d8"
+        }
+      ],
+      "x": 350,
+      "y": 1749,
+      "rtype": "Variable",
+      "rsubtype": "Store Value in Variable",
+      "formdata": [
+        "userinfo_pseudo",
+        "Text",
+        "temp",
+        "1+"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType",
+        "param"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "user pseudo",
+      "guid": "719bbf31-8b4f-40f9-9f94-9d54bac84509",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "cfef8de4-482b-4db9-8c1d-34588a51312f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "c71823fa-c536-406a-929c-bd62972e9326"
+        }
+      ],
+      "x": 544,
+      "y": 1757,
+      "rtype": "Variable",
+      "rsubtype": "Get Mentioned User",
+      "formdata": [
+        "pseudo_user",
+        "User",
+        "temp"
+      ],
+      "formnames": [
+        "varname",
+        "vartype",
+        "saveVarType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "réponce user info",
+      "guid": "cfef8de4-482b-4db9-8c1d-34588a51312f",
+      "reactionFields": [],
+      "embedfields": [
+        {
+          "name": "mention",
+          "value": "<@${tempVars.pseudo_user.id}>",
+          "inline": "true"
+        },
+        {
+          "name": "couleur",
+          "value": "${tempVars.pseudo_user.displayHexColor}",
+          "inline": "true"
+        },
+        {
+          "name": "tag",
+          "value": "${tempVars.pseudo_user.user.tag}",
+          "inline": "true"
+        },
+        {
+          "name": "pseudo",
+          "value": "${tempVars.pseudo_user.displayName}",
+          "inline": "true"
+        },
+        {
+          "name": "pseudo du server",
+          "value": "${tempVars.pseudo_user.nickname}",
+          "inline": "true"
+        },
+        {
+          "name": "id",
+          "value": "${tempVars.pseudo_user.id}",
+          "inline": "true"
+        },
+        {
+          "name": "avatar du serveur",
+          "value": "${tempVars.pseudo_user.user.avatarURL}",
+          "inline": "true"
+        },
+        {
+          "name": "avatar d'origine",
+          "value": "${tempVars.pseudo_user.user.defaultAvatarURL}",
+          "inline": "true"
+        }
+      ],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "719bbf31-8b4f-40f9-9f94-9d54bac84509"
+        }
+      ],
+      "x": 744,
+      "y": 1748,
+      "rtype": "Message",
+      "rsubtype": "Send Embed",
+      "formdata": [
+        "${dbsVars.CommandChannel.id}",
+        "FAFF52",
+        "user info ${tempVars.pseudo_user.displayName}",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "Mel bot",
+        "https://cdn.discordapp.com/avatars/900423156324532224/53403cfd21aacf0dbcd52e706c7cd2f1.png?size=512&quot",
+        "https://discord.com/api/oauth2/authorize?client_id=900423156324532224&permissions=8&scope=bot",
+        "",
+        "${tempVars.pseudo_user.user.avatarURL}",
+        "",
+        "Mel bot",
+        "BOOL_TRUE@@",
+        "",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "color",
+        "title",
+        "url",
+        "authorname",
+        "authorimageurl",
+        "authorlink",
+        "description",
+        "thumbnail",
+        "image",
+        "footer",
+        "timestamp",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "command",
+      "name": "salon role",
+      "guid": "434695ef-9ec4-4a15-8b13-00592b3d2f17",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "170d349e-6915-4662-a758-c7dfb5477312"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 167,
+      "y": 2036,
+      "perms": [
+        "admin-mel-bot"
+      ]
+    },
+    {
+      "type": "command",
+      "name": "admin mel bot",
+      "guid": "29f5a8a0-e445-4b52-a367-fd0778fdee5b",
+      "outputs": [
+        {
+          "label": "responses",
+          "connections": [
+            "b6d1c7bd-9611-43a9-97ac-6043c01d675e"
+          ]
+        }
+      ],
+      "inputs": [],
+      "x": 175,
+      "y": 1902
+    },
+    {
+      "type": "response",
+      "name": "admin-mel-bot",
+      "guid": "b6d1c7bd-9611-43a9-97ac-6043c01d675e",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "Admin-mel-bot",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "29f5a8a0-e445-4b52-a367-fd0778fdee5b"
+        }
+      ],
+      "x": 404,
+      "y": 1895,
+      "rtype": "Server Action",
+      "rsubtype": "Add Role to Server",
+      "formdata": [
+        "Admin-mel-bot",
+        "FFFFFF",
+        "",
+        "false",
+        "false",
+        "Admin-mel-bot",
+        "temp"
+      ],
+      "formnames": [
+        "rolename",
+        "color",
+        "position",
+        "hoist",
+        "mentionable",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "roles",
+      "guid": "170d349e-6915-4662-a758-c7dfb5477312",
+      "reactionFields": [],
+      "embedfields": [],
+      "saveToVariable": "roles-salon",
+      "saveToVariableType": "temp",
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": [
+            "4a8f0346-352c-4812-8c87-1aaf641c837f"
+          ]
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "434695ef-9ec4-4a15-8b13-00592b3d2f17"
+        }
+      ],
+      "x": 381,
+      "y": 2027,
+      "rtype": "Channel Action",
+      "rsubtype": "Create Channel",
+      "formdata": [
+        "Roles",
+        "",
+        "attributions roles",
+        "Text",
+        "roles-salon",
+        "temp"
+      ],
+      "formnames": [
+        "channelname",
+        "chancategory",
+        "reason",
+        "channeltype",
+        "saveToVariable",
+        "saveToVariableType"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    },
+    {
+      "type": "response",
+      "name": "roles perm",
+      "guid": "4a8f0346-352c-4812-8c87-1aaf641c837f",
+      "reactionFields": [],
+      "embedfields": [],
+      "outputs": [
+        {
+          "label": "next response",
+          "connections": []
+        }
+      ],
+      "inputs": [
+        {
+          "label": "trigger",
+          "id": "170d349e-6915-4662-a758-c7dfb5477312"
+        }
+      ],
+      "x": 606,
+      "y": 2040,
+      "rtype": "Channel Action",
+      "rsubtype": "Update Channel Permissions",
+      "formdata": [
+        "${tempVars.roles.id}",
+        "${tempVars.Admin.id} ",
+        [
+          "BAN_MEMBERS"
+        ],
+        "Allow"
+      ],
+      "formnames": [
+        "channelName",
+        "permid",
+        "permissions",
+        "allow"
+      ],
+      "messageActionRows": [],
+      "valueFields": []
+    }
+  ]
+}
